@@ -1,12 +1,10 @@
-;; -*- mode: emacs-lisp; lexical-binding: t; -*-
-;;; vlcrc --- A remote control interface to vlc from Emacs
-;; Copyright (C) 2016 Oleh Krehel
+;;; vlc-rc.el --- A remote control interface to vlc -*- lexical-binding: t -*-
 
 ;; Author: MoHKale
 ;; URL: https://github.com/MoHKale/vlc-rc
 ;; Version: 0.1.0
 ;; Keywords: vlc, multimedia
-;; Package-Requires: ((emacs "26.2") (bind-key "2.4"))
+;; Package-Requires: ((emacs "24") (bind-key "2.4"))
 
 ;; This file is not part of GNU Emacs
 
@@ -23,7 +21,7 @@
 ;; For a full copy of the GNU General Public License
 ;; see <http://www.gnu.org/licenses/>.
 
-;;; Summary:
+;;; Commentary:
 ;; Using the rc interface of vlc Emacs can control
 ;; media playing quite easily.
 
@@ -53,7 +51,6 @@
 ;;
 ;; titles & chapter commands
 
-(require 'cl)
 (require 'cl-lib)
 (require 'bind-key)
 
@@ -744,3 +741,5 @@ stream) or one of the diplayed autocomplete suggestions."
  ("s" . vlc/set-subtitle-track))
 
 (provide 'vlc-rc)
+
+;;; vlc-rc.el ends here
