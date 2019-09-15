@@ -319,6 +319,12 @@ as is."
 (vlc/defun-send-message-command previous "prev"
   "move to the last item queued in your main playlist.")
 
+(vlc/defun-send-message-command jump-forward "seek +10"
+  "play the current stream. WARN This doesn't unpause.")
+
+(vlc/defun-send-message-command jump-backward "seek -10"
+  "play the current stream. WARN This doesn't unpause.")
+
 (vlc/defun-send-message-command clear "clear"
   "clear all the items in your current playlist and stop.")
 
