@@ -619,6 +619,7 @@ stream) or one of the diplayed autocomplete suggestions."
 ; |_|  |_|_|___/\___|
 ;
 
+;;;###autoload
 (defun vlc ()
   "prompts user for a vlc command and then executes it interactively "
   (interactive)
@@ -648,6 +649,7 @@ stream) or one of the diplayed autocomplete suggestions."
   (and vlc-process
        (process-live-p vlc-process)))
 
+;;;###autoload
 (defun vlc/show-vlc-buffer ()
   (interactive)
   (display-buffer (get-buffer vlc-client-buffer-name) 'display-buffer-pop-up-window))
@@ -667,10 +669,12 @@ stream) or one of the diplayed autocomplete suggestions."
 ;
 
 ;; TODO support mark file usage
+;;;###autoload
 (defun vlc/dired-add-file ()
   (interactive)
   (vlc/add-file (dired-get-filename)))
 
+;;;###autoload
 (defun vlc/dired-enqueue-file ()
   (interactive)
   (vlc/enqueue-file (dired-get-filename)))
